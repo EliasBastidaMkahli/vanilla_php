@@ -1,0 +1,25 @@
+# --- Configuración y Credenciales (¡CRÍTICO!) ---
+# Nunca subas contraseñas de bases de datos o llaves de API
+.env
+.env.local
+config.local.php
+
+# --- Dependencias (si usas librerías externas) ---
+# Si usas Composer, las dependencias se bajan en el servidor, no se suben a Git
+vendor/
+
+# --- Editores de Código e IDEs ---
+# Configuraciones locales de tu editor que no sirven a otros desarrolladores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- Archivos del Sistema Operativo ---
+# Archivos basura automáticos de Windows y macOS
+.DS_Store
+Thumbs.db
+
