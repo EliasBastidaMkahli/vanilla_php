@@ -79,3 +79,19 @@
 
      return $usuario;
  }
+  /**
+  * Como exigirLogin(), pero además exige un rol. Si el usuario no lo tiene,
+  * responde 403 (prohibido) y termina.
+  *
+  * @return array{email: string, firstName: string, lastName: string, rol: string}
+  */
+ function exigirRol(string $rol): array
+ {
+     $usuario = exigirLogin();
+     if ($usuario['rol'] !== $rol) {
+         http_response_code(403);
+         exit('No tienes permiso para ver esta página.');
+     }
+
+     return $usuario;
+ }
